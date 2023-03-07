@@ -5,12 +5,12 @@ const Home=()=>{
     const navigate = useNavigate();
     const[buttonStatus, setButtonStatus] = useState(true);
     const [address, setAddress] = useState('');
-
+    // console.log('env', process.env.REACT_APP_YOUR_API_KEY)
     const nftListHandler=(e)=>{
         e.preventDefault();
         navigate('list', {
             state: {
-                address: '0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d',
+                address: process.env.REACT_APP_SAMPLE_WALLET,
                 name: 'wallet'
             }
         })
